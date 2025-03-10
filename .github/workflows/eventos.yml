@@ -1,0 +1,14 @@
+name: EVentos
+
+on: 
+    pull_request:
+    workflow_dispatch:
+    schedule:
+        - cron: "0/5 * * * *"    
+
+jobs:
+    job1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Step1
+              run: echo "Hola mundo, fui lanzado por el evento ${{github.event_name}}"
