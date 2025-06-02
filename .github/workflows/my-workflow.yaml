@@ -1,8 +1,14 @@
 name: HELLO WORLD
-on: push
+on: 
+    - push
+    - pull_request    
 jobs:
   job1:    
      runs-on: ubuntu-latest
      steps:
         - name: echo-hello-world
           run: echo "¡Hola, mundo!"
+
+        - name: fail_step
+          run: exit 1
+            
