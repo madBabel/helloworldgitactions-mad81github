@@ -11,4 +11,19 @@ jobs:
 
         - name: fail_step
           run: exit 1
+  job2:    
+     runs-on: ubuntu-latest
+     steps:
+        - name: echo-hello-world
+          run: echo "¡Hola, mundo!"
+
+  job3:    
+     runs-on: ubuntu-latest
+     steps:
+        - name: echo-hello-world
+          run: echo "¡Hola, mundo!"
+
+        - name: fail_step
+          run: exit 1
+            
             
